@@ -7,31 +7,42 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Label Text="Conta"/>
+            <Label Text="Valor da Conta"/>
 
-            <Entry Placeholder="Ensira o Valor" Keyboard="Numeric" />
+            <Entry
+                x:Name="ContaEntry"
+                Placeholder="Ensira o Valor"
+                />
 
-            <Label x:Name="ValorRealLabel" Text="R$: 0.00"/>
+            <Label
+                   Text="Valor da Gorjeta"/>
+            <Label 
+                x:Name="GorjetaLabel"
+                Text="R$0.00" />
 
-            <Label Text="Valor da Gorjeta" />
+            <Label 
+                x:Name="PorcentagemGorjetaLabel"
+                Text="5%" />
+            <Label
+                Text="ValorTotal:"
+                />
+            <Label
+                x:Name="ValorTotalLabel"
+                Text="0.00"
+                />
 
-            <Label Text="0.00" />
-
-            <Label Text="Porcentagem da Gorjeta"/>
-
-            <Label x:Name="PorcentagemGorjetaLabel" Text="0"/>
             <Slider 
-                x:Name="TipPercentSlider" 
+                x:Name="PorcentagemSlider" 
                 Minimum="0" 
                 Maximum="100" 
-                ValueChanged="TrocaDeValorDoSlider"
-                SemanticProperties.Description="Porcentagem da Gorjeta"/>
+                Value="5"
+                ValueChanged="TrocaDeValorDoSlider"/>
 
             <Button Text="15" Clicked="Gorjeta15PorcentagemButton_Clicked"  />
             <Button Text="20%" Clicked="Gorjeta20PorcentagemButton_Clicked"/>
             
-            <Button x:Name="RoundDown" Text="Round Down" />
-            <Button x:Name="RoundUp" Text="Round Up" />
+            <Button x:Name="ArrendodarParaBaixoButton" Text="Arrendodar Para Baixo" Clicked="ArrendodarParaBaixoButton_Clicked" />
+            <Button x:Name="ArrendodarParaCimaButton" Text="Arrendodar Para Cima" Clicked="ArrendodarParaCimaButton_Clicked" />
         </VerticalStackLayout>
     </ScrollView>
 
